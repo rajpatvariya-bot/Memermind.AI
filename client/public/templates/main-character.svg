@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs><linearGradient id="g" x2=".9" y2="1"><stop stop-color="#f9836c"/><stop offset="1" stop-color="#ae73f5"/></linearGradient><radialGradient id="halo"><stop stop-color="#fff4bb"/><stop offset="1" stop-color="#ffc5b7" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="720" fill="url(#g)"/><circle cx="492" cy="322" r="290" fill="url(#halo)"/>
+  <path d="M218 720Q240 502 421 486H544Q725 502 747 720Z" fill="#263640"/><path d="M382 494L480 626 582 494 548 470H418Z" fill="#fff1e0"/><circle cx="480" cy="323" r="150" fill="#f6c19c"/><path d="M331 302Q325 154 481 152Q634 155 630 301Q582 249 556 231Q498 285 431 225Q395 272 331 302Z" fill="#201b25"/><path d="M423 347L453 342M509 342L539 347" stroke="#30232a" stroke-width="12" stroke-linecap="round"/><path d="M446 410Q481 439 515 410" fill="none" stroke="#a34451" stroke-width="12" stroke-linecap="round"/>
+  <path d="M116 147L138 109 160 147 198 169 160 190 138 229 116 190 78 169Z" fill="#fff3a5"/><path d="M790 366L807 338 824 366 852 382 824 398 807 427 790 398 762 382Z" fill="#c3ff73"/><text x="64" y="653" fill="#fff8ed" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="5">MAIN CHARACTER ENERGY</text>
+</svg>

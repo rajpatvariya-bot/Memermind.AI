@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#f9d66c"/><stop offset="1" stop-color="#f38a9a"/></linearGradient></defs>
+  <rect width="960" height="720" fill="url(#g)"/><circle cx="488" cy="346" r="245" fill="#fff3cf" opacity=".64"/><path d="M0 572Q191 510 391 583T960 542V720H0Z" fill="#293339"/>
+  <g transform="translate(479 372)"><path d="M0 -171L44 -51 170 -95 89 12 190 92 61 82 36 210 -17 94 -136 144 -77 28 -181 -43 -53 -39Z" fill="#ffe274" stroke="#9d644d" stroke-width="13"/><circle cx="-38" cy="9" r="14" fill="#312b2a"/><circle cx="41" cy="9" r="14" fill="#312b2a"/><path d="M-30 65Q1 42 31 65" fill="none" stroke="#312b2a" stroke-width="10" stroke-linecap="round"/></g>
+  <path d="M780 158L804 124 828 158 862 182 828 204 804 240 780 204 746 182Z" fill="#fff5db"/><text x="60" y="90" fill="#433637" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">PLOT TWIST: LIFE HAD OTHER PLANS</text>
+</svg>

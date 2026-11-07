@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#c7e7e2"/><stop offset="1" stop-color="#f5d7ae"/></linearGradient></defs>
+  <rect width="960" height="720" fill="url(#g)"/><path d="M0 580Q203 485 381 581T960 552V720H0Z" fill="#789087"/><circle cx="466" cy="294" r="145" fill="#f0ba91"/><path d="M324 282Q324 135 468 145Q617 151 610 294Q543 226 504 228Q441 279 324 282Z" fill="#46342e"/><circle cx="419" cy="302" r="11" fill="#28211f"/><circle cx="511" cy="302" r="11" fill="#28211f"/><path d="M431 367Q465 347 499 367" fill="none" stroke="#8d4b52" stroke-width="9" stroke-linecap="round"/><path d="M359 478Q464 432 570 478L660 720H266Z" fill="#eee6d8"/>
+  <g transform="translate(676 406) rotate(28)"><path d="M0 -119C-52 -165 -98 -112 -51 -60L-44 68C-99 113 -42 165 0 119C42 165 99 113 44 68L51 -60C98 -112 52 -165 0 -119Z" fill="#d49a56" stroke="#5d4535" stroke-width="8"/><path d="M0 -130V132" stroke="#fff0cf" stroke-width="4"/><circle cy="0" r="21" fill="#775b47"/></g>
+  <text x="66" y="85" fill="#3e554e" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">A SMALL VIOLIN FOR BIG FEELINGS</text>
+</svg>

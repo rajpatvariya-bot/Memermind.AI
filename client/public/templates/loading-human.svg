@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#ada8ff"/><stop offset="1" stop-color="#86d7cc"/></linearGradient><pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2" fill="#fff" opacity=".36"/></pattern></defs>
+  <rect width="960" height="720" fill="url(#g)"/><rect width="960" height="720" fill="url(#p)"/><rect x="105" y="117" width="750" height="496" rx="42" fill="#f4f0ea" opacity=".92"/>
+  <circle cx="480" cy="300" r="102" fill="#f0bd9e"/><path d="M377 294Q390 183 480 187Q571 186 582 294Q530 257 495 252Q453 287 377 294Z" fill="#453934"/><path d="M437 315Q453 299 469 315M493 315Q509 299 525 315" fill="none" stroke="#473a34" stroke-width="9" stroke-linecap="round"/><path d="M442 365Q480 346 518 365" fill="none" stroke="#a45d5c" stroke-width="9" stroke-linecap="round"/><path d="M399 446Q480 417 561 446L606 586H354Z" fill="#fa8b72"/>
+  <rect x="340" y="495" width="280" height="22" rx="11" fill="#d9d5ce"/><rect x="340" y="495" width="170" height="22" rx="11" fill="#a28af5"/><text x="480" y="571" text-anchor="middle" fill="#3b3736" font-family="Arial,sans-serif" font-size="25" font-weight="700">LOADING HUMAN...</text>
+</svg>
