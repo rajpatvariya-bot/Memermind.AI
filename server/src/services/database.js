@@ -8,6 +8,7 @@ export function hasMongoUri(value = process.env.MONGODB_URI) {
 /** Connect before serving requests so configured persistence cannot silently degrade to memory. */
 export async function connectDatabase(uri = process.env.MONGODB_URI) {
   if (!hasMongoUri(uri)) return false;
+  if (mongoose.connection.readyState >= 1) return true;
 
   try {
     await mongoose.connect(uri.trim(), { serverSelectionTimeoutMS: 8_000 });

@@ -23,11 +23,15 @@ function configuredOrigin(name, value) {
 export function createApp() {
   const app = express();
   const production = process.env.NODE_ENV === 'production';
-  const clientOrigin = configuredOrigin('CLIENT_ORIGIN', process.env.CLIENT_ORIGIN || 'http://127.0.0.1:5173');
-  const apiOrigin = configuredOrigin('API_ORIGIN', process.env.API_ORIGIN || 'http://127.0.0.1:4000');
-  const allowedOrigins = new Set([clientOrigin]);
-  const connectSources = ["'self'", apiOrigin];
+  const clientOrigin = process.env.CLIENT_ORIGIN ? configuredOrigin('CLIENT_ORIGIN', process.env.CLIENT_ORIGIN) : null;
+  const apiOrigin = process.env.API_ORIGIN ? configuredOrigin('API_ORIGIN', process.env.API_ORIGIN) : null;
+  const allowedOrigins = new Set(clientOrigin ? [clientOrigin] : []);
+  if (process.env.VERCEL_URL) allowedOrigins.add(`https://${process.env.VERCEL_URL}`);
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) allowedOrigins.add(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+  const connectSources = ["'self'"];
+  if (apiOrigin) connectSources.push(apiOrigin);
   if (!production) {
+    if (!clientOrigin) allowedOrigins.add('http://127.0.0.1:5173');
     for (const origin of ['http://localhost:5173', 'http://127.0.0.1:5173']) allowedOrigins.add(origin);
     connectSources.push('http://127.0.0.1:5173', 'http://localhost:5173', 'http://127.0.0.1:4000', 'http://localhost:4000');
   }
@@ -46,6 +50,7 @@ export function createApp() {
     credentials: true,
     origin(origin, callback) {
       if (!origin || allowedOrigins.has(origin)) return callback(null, true);
+      if (origin.endsWith('.vercel.app')) return callback(null, true);
       if (!production) {
         try {
           const parsed = new URL(origin);

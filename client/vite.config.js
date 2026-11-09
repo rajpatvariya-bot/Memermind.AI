@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 function frontendCspPlugin(apiOrigin, development) {
-  const connectSources = ["'self'", apiOrigin];
+  const connectSources = ["'self'"];
+  if (apiOrigin) connectSources.push(apiOrigin);
   if (development) {
     for (let port = 5173; port <= 5180; port += 1) {
       connectSources.push(`ws://127.0.0.1:${port}`, `ws://localhost:${port}`);
@@ -30,14 +31,16 @@ function frontendCspPlugin(apiOrigin, development) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const apiBase = env.VITE_API_BASE || 'http://127.0.0.1:4000/api';
-  let apiOrigin;
-  try {
-    const parsed = new URL(apiBase);
-    if (!['http:', 'https:'].includes(parsed.protocol) || parsed.username || parsed.password) throw new Error();
-    apiOrigin = parsed.origin;
-  } catch {
-    throw new Error('VITE_API_BASE must be a valid HTTP(S) API URL.');
+  const apiBase = env.VITE_API_BASE || (mode === 'development' ? 'http://127.0.0.1:4000/api' : '/api');
+  let apiOrigin = null;
+  if (apiBase.startsWith('http://') || apiBase.startsWith('https://')) {
+    try {
+      const parsed = new URL(apiBase);
+      if (parsed.username || parsed.password) throw new Error();
+      apiOrigin = parsed.origin;
+    } catch {
+      throw new Error('VITE_API_BASE must be a valid HTTP(S) API URL or relative path.');
+    }
   }
 
   return {
